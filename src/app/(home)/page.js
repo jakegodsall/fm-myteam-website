@@ -1,16 +1,18 @@
 import Image from "next/image";
 import Hero from "./components/Hero/Hero";
-import Build from "./components/BuildSection/BuildSection";
-import TestamonialSection from "./components/TestimonialSection/TestimonialSection";
-import ContactUsSection from "./components/ContactUsSection/ContactUsSection";
+import BuildSection from "./components/BuildSection/BuildSection";
+import GetStartedSection from "./components/GetStartedSection/GetStartedSection";
+import TestimonialSection from "./components/TestimonialSection/TestimonialSection";
+import ContactSection from "./components/ContactSection/ContactSection";
 
 export default function Home() {
   return (
     <main className="flex flex-col">
       <Hero />
-      <Build />
-      <TestamonialSection />
-      <ContactUsSection />
+      <BuildSection />
+      <TestimonialSection />
+      <GetStartedSection />
+      <ContactSection />
     </main>
   );
 }

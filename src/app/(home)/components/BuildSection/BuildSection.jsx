@@ -35,7 +35,7 @@ const data = [
   },
 ];
 
-export default function Build() {
+export default function BuildSection() {
   return (
     <div className="bg-secondary-green-darkest">
       <div className="mb-[5.6rem] flex overflow-hidden">
