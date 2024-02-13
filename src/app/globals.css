@@ -26,6 +26,7 @@ html {
 }
 
 body {
+  color: var(--primary-white);
   font-weight: 600;
   background-color: var(--secondary-green-dark);
 }

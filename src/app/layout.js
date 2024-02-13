@@ -13,7 +13,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body className={livvic.className}>
-        <div className="py-[4.8rem] px-[2.4rem]">
+        <div className="mx-[2.4rem] mb-[8rem] mt-[4.8rem]">
           <Header />
         </div>
         {children}

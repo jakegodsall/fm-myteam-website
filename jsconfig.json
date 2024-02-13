@@ -4,6 +4,7 @@
       "@/*": ["./src/*"],
       "@assets/*": ["./public/assets/*"],
       "@avatars/*": ["./public/assets/avatars/*"],
+      "@bg/*": ["./public/assets/bg-patterns/*"],
       "@icons/*": ["./public/assets/icons/*"],
       "@logos/*": ["./public/assets/logos/*"]
     }
