@@ -12,8 +12,8 @@ export default function Hero() {
         </h1>
         <p className="text-[1.5rem] leading-[2.8rem] opacity-80">
           Finding the right people and building high performing teams can be
-          hard. Most companies aren't tapping into the abundance of global
-          talent. We're about to change that.
+          hard. Most companies aren&apos;t tapping into the abundance of global
+          talent. We&apos;re about to change that.
         </p>
       </div>
       <div className="absolute bottom-0">

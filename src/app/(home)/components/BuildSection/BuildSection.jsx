@@ -51,6 +51,7 @@ export default function BuildSection() {
           width="200"
           height="244"
           className="absolute right-[-10rem] block h-[24.4rem] w-[20rem]"
+          alt="circle with grating"
         />
       </div>
       <ul className="mx-[2.4rem]  flex max-w-[34rem] flex-col items-center gap-[4.8rem] sm:max-w-[57rem]">
