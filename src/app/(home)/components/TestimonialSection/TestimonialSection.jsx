@@ -37,19 +37,19 @@ const data = [
 
 export default function TestimonialSection() {
   return (
-    <section className="flex flex-col text-center">
+    <section className="flex flex-col items-center text-center ">
       <Image
         src={testimonialBox}
         alt="black box with grid"
         width="147"
         height="100"
-        className="mb-[4rem]"
+        className="mb-[4rem] self-start"
       />
-      <h2 className="mx-[2.4rem] mb-[8.4rem] text-[3.3rem] leading-[3.2rem]">
-        Delivering real results for top companies. Some of our{" "}
+      <h2 className="mx-[2.4rem] mb-[8.4rem] text-[3.3rem] leading-[3.2rem] sm:mb-[6rem] sm:max-w-[57rem] sm:translate-y-[-3rem]">
+        Delivering real results for top companies. Some of our
         <span className="text-secondary-green-light">success stories.</span>
       </h2>
-      <ul className="mx-[2.4rem] mb-[6.4rem] flex flex-col gap-[8.4rem]">
+      <ul className="mx-[2.4rem] mb-[6.4rem] flex flex-col gap-[8.4rem] sm:mb-0 sm:max-w-[57rem]">
         {data.map((testimonialItem) => (
           <li key={testimonialItem.id}>
             <TestimonialItem

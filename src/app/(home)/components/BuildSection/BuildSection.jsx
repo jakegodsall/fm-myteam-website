@@ -37,7 +37,7 @@ const data = [
 
 export default function BuildSection() {
   return (
-    <section className="relative flex flex-col items-center overflow-hidden bg-secondary-green-darkest">
+    <section className="relative flex flex-col items-center overflow-hidden bg-secondary-green-darkest pb-[6.4rem] sm:pb-[10rem]">
       <div className="mb-[5.6rem] flex h-[24.4rem] w-full  sm:w-full">
         <div className="relative w-full pl-[2.4rem] pt-[6.4rem]">
           <div className="mb-[3.2rem] h-[0.4rem] w-[5rem] bg-primary-coral"></div>
@@ -53,7 +53,7 @@ export default function BuildSection() {
           className="absolute right-[-10rem] block h-[24.4rem] w-[20rem]"
         />
       </div>
-      <ul className="mx-[2.4rem] mb-[6.4rem] flex max-w-[34rem] flex-col items-center gap-[4.8rem] ">
+      <ul className="mx-[2.4rem]  flex max-w-[34rem] flex-col items-center gap-[4.8rem] sm:max-w-[57rem]">
         {data.map((buildItem) => (
           <li key={buildItem.id}>
             <BuildItem
