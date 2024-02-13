@@ -3,6 +3,7 @@ import Link from "next/link";
 
 import companyLogo from "@assets/logo.svg";
 import SocialBar from "@/app/components/SocialsBar";
+import NavBar from "@/app/components/NavBar";
 
 export default function ContactSection() {
   return (
@@ -14,13 +15,8 @@ export default function ContactSection() {
         height="24"
         className="mb-[2.4rem] h-[2.4rem] w-[9.6rem]"
       />
-      <div className="mb-[2.4rem] flex gap-[2.4rem]">
-        <Link className="text-[1.5rem]" href="/">
-          home
-        </Link>
-        <Link className="text-[1.5rem]" href="/about">
-          about
-        </Link>
+      <div className="mb-[2.4rem] text-[1.5rem]">
+        <NavBar />
       </div>
       <p className="mb-[4rem] text-[1.5rem] leading-[2.5rem] opacity-60">
         987 Hillcrest Lane
