@@ -6,7 +6,7 @@ import contactBackground from "@bg/bg-home-contact-us.svg";
 
 export default function GetStartedSection() {
   return (
-    <div className="relative flex flex-col items-center bg-primary-coral pt-[8.3rem] text-center text-secondary-green-darkest">
+    <section className="relative flex flex-col items-center bg-primary-coral pt-[8.3rem] text-center text-secondary-green-darkest">
       <h2 className="mb-[3rem] max-w-[22rem] text-[3.2rem] font-bold leading-[3.2rem]">
         Ready to get started?
       </h2>
@@ -20,6 +20,6 @@ export default function GetStartedSection() {
         height="123"
         className="absolute bottom-0 h-[12.3rem] w-[20rem] self-start"
       />
-    </div>
+    </section>
   );
 }

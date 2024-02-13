@@ -4,7 +4,7 @@ import heroBackground from "@bg/bg-home-hero.svg";
 
 export default function Hero() {
   return (
-    <div className="bg-home-hero h-[40rem]  text-center">
+    <section className="bg-home-hero relative h-[40rem] text-center">
       <h1 className="mb-[1.8rem] px-[2.4rem] text-[4rem] leading-[4rem]">
         Find the
         <br /> best <span className="text-primary-coral">talent</span>
@@ -14,7 +14,9 @@ export default function Hero() {
         Most companies aren't tapping into the abundance of global talent. We're
         about to change that.
       </p>
-      <Image src={heroBackground} alt="hero design" />
-    </div>
+      <div className="absolute bottom-0">
+        <Image src={heroBackground} alt="hero design" />
+      </div>
+    </section>
   );
 }

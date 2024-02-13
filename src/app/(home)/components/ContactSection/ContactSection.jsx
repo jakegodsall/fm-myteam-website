@@ -6,7 +6,7 @@ import SocialBar from "@/app/components/SocialsBar";
 
 export default function ContactSection() {
   return (
-    <div className="flex flex-col items-center bg-secondary-green-darkest px-[6rem] py-[6.6rem] text-center">
+    <section className="flex flex-col items-center bg-secondary-green-darkest px-[6rem] py-[6.6rem] text-center">
       <Image
         src={companyLogo}
         alt="company logo"
@@ -37,6 +37,6 @@ export default function ContactSection() {
       <p className="text-[1.5rem] opacity-60">
         Copyright 2020. All Rights Reserved
       </p>
-    </div>
+    </section>
   );
 }
