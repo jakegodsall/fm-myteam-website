@@ -19,7 +19,7 @@ export default function TestimonialItem({
         className="absolute top-[-3.5rem] -z-10"
       />
       <p className="mb-[1.6rem] text-[1.5rem] leading-[2.5rem]">
-        "{testimonial}"
+        &lsquo;&lsquo;{testimonial}&rsquo;&rsquo;
       </p>
       <p className="text-[1.8rem] font-bold text-secondary-green-light">
         {author}
