@@ -77,20 +77,23 @@ const data = [
 
 export default function DirectorsSection() {
   return (
-    <section className="relative flex flex-col items-center overflow-hidden bg-secondary-green-dark pt-[8.8rem]">
+    <section className="relative flex flex-col items-center overflow-hidden bg-secondary-green-dark pt-[8.8rem] sm:pt-[10rem]">
       <Image
         src={directorsTopBackground}
         alt="a circle with a square of small circles"
         width="200"
         height="200"
-        className="absolute left-[-10rem] top-[-10.5rem]"
+        className="absolute left-[-10rem] top-[-10.5rem] sm:top-0"
       />
       <h2 className="mb-[4.8rem] text-[3.2rem] font-bold">
         Meet the directors
       </h2>
-      <ul className="mb-[5.2rem] flex w-full flex-col gap-[5.2rem]  px-[2.4rem]">
+      <ul className="mb-[5.2rem] flex w-full flex-col flex-wrap gap-[5.2rem] px-[2.4rem] sm:flex-row sm:justify-center sm:gap-x-[1.1rem] sm:gap-y-[7.6rem]">
         {data.map((director) => (
-          <li key={director.id}>
+          <li
+            key={director.id}
+            className="mx-auto w-[90%] max-w-[32.7rem] sm:mx-0 sm:w-[45%] sm:max-w-[28rem]"
+          >
             <DirectorItem
               avatar={director.avatar}
               name={director.name}
