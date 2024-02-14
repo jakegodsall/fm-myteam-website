@@ -54,7 +54,7 @@ export default function ClientsSection() {
       <h2 className="mb-[6.4rem] text-[3.2rem] font-bold">
         Some of our clients
       </h2>
-      <ul className="mb-[8.2rem] flex max-w-[15rem] flex-col items-center gap-[5.5rem]">
+      <ul className="mb-[8.2rem] flex max-w-[15rem] flex-col items-center gap-[5.5rem] sm:mx-[4rem] sm:max-w-none sm:flex-row">
         {clients.map((client) => (
           <li key={client.id}>
             <a href={client.link}>
