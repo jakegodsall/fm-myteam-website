@@ -1,3 +1,4 @@
+import ClientsSection from "./components/ClientsSection/ClientsSection";
 import DirectorsSection from "./components/DirectorsSection/DirectorsSection";
 import Hero from "./components/Hero/Hero";
 
@@ -6,6 +7,7 @@ export default function AboutPage() {
     <main className="flex flex-col">
       <Hero />
       <DirectorsSection />
+      <ClientsSection />
     </main>
   );
 }
