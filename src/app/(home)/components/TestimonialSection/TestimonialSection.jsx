@@ -37,7 +37,7 @@ const data = [
 
 export default function TestimonialSection() {
   return (
-    <section className="flex flex-col items-center text-center ">
+    <section className="bg-secondary-green-darker flex flex-col items-center text-center">
       <Image
         src={testimonialBox}
         alt="black box with grid"

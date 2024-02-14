@@ -14,6 +14,7 @@ module.exports = {
         "secondary-green-light": "var(--secondary-green-light)",
         "secondary-green-medium": "var(--secondary-green-medium)",
         "secondary-green-dark": "var(--secondary-green-dark)",
+        "secondary-green-darker": "var(--secondary-green-darker)",
         "secondary-green-darkest": "var(--secondary-green-darkest)",
       },
     },

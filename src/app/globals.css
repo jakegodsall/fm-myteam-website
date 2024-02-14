@@ -10,7 +10,8 @@
   --secondary-green-light: #79c8c7;
   --secondary-green-medium: #2c6269;
   --secondary-green-dark: #004047;
-  --secondary-green-darkest: #012f34;
+  --secondary-green-darker: #012f34;
+  --secondary-green-darkest: #002529;
 }
 
 *,
@@ -28,7 +29,7 @@ html {
 body {
   color: var(--primary-white);
   font-weight: 600;
-  background-color: var(--secondary-green-dark);
+  background-color: var(--primary-teal);
 }
 
 a:link,
