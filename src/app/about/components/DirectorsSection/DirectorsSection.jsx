@@ -77,7 +77,7 @@ const data = [
 
 export default function DirectorsSection() {
   return (
-    <section className="relative flex flex-col items-center overflow-hidden bg-secondary-green-darker">
+    <section className="relative flex flex-col items-center overflow-hidden bg-secondary-green-dark">
       <div className="flex w-4/5 flex-col items-center pt-[8.8rem] sm:pt-[10rem] lg:max-w-[111rem]">
         <Image
           src={directorsTopBackground}
@@ -89,7 +89,7 @@ export default function DirectorsSection() {
         <h2 className="mb-[4.8rem] text-[3.2rem] font-bold">
           Meet the directors
         </h2>
-        <ul className="mb-[5.2rem] flex w-full flex-col flex-wrap gap-[5.2rem] px-[2.4rem] sm:flex-row sm:justify-center sm:gap-x-[1.1rem] sm:gap-y-[7.6rem]">
+        <ul className="mb-[11.6rem] flex w-full flex-col flex-wrap gap-[5.2rem] px-[2.4rem] sm:mb-[12.8rem] sm:flex-row sm:justify-center sm:gap-x-[1.1rem] sm:gap-y-[7.6rem] lg:mb-[16.8rem] lg:gap-x-[3rem]">
           {data.map((director) => (
             <li
               key={director.id}
@@ -103,13 +103,15 @@ export default function DirectorsSection() {
             </li>
           ))}
         </ul>
-        <Image
-          src={directorsBottomBackground}
-          alt="box with grating"
-          width="147"
-          height="100"
-          className="self-end"
-        />
+        <div className="absolute bottom-0 right-0">
+          <Image
+            src={directorsBottomBackground}
+            alt="box with grating"
+            width="147"
+            height="100"
+            className="self-end"
+          />
+        </div>
       </div>
     </section>
   );
