@@ -1,3 +1,4 @@
+import clsx from "clsx";
 import { Livvic } from "next/font/google";
 import "./globals.css";
 import Header from "./components/Header";
@@ -12,11 +13,18 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={livvic.className}>
-        <div className="mx-[2.4rem] mb-[8rem] mt-[4.8rem] sm:mx-[3rem] sm:mb-[12rem]">
-          <Header />
+      <body
+        className={clsx(
+          livvic.className,
+          "flex flex-col items-center bg-secondary-green-darkest",
+        )}
+      >
+        <div className="w-full max-w-[180rem] bg-secondary-green-dark">
+          <div className="mx-[2.4rem] mb-[8rem] mt-[4.8rem] sm:mx-[3rem] sm:mb-[12rem]">
+            <Header />
+          </div>
+          {children}
         </div>
-        {children}
       </body>
     </html>
   );

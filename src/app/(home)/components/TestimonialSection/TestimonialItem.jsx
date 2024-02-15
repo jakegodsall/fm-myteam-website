@@ -16,9 +16,9 @@ export default function TestimonialItem({
         alt="double quotes"
         width="67"
         height="56"
-        className="absolute top-[-3.5rem] -z-10"
+        className="absolute top-[-3.5rem]"
       />
-      <p className="mb-[1.6rem] text-[1.5rem] leading-[2.5rem] lg:mb-[2.4rem]">
+      <p className="relative z-10 mb-[1.6rem] text-[1.5rem] leading-[2.5rem] lg:mb-[2.4rem]">
         &lsquo;&lsquo;{testimonial}&rsquo;&rsquo;
       </p>
       <p className="text-[1.8rem] font-bold text-secondary-green-light">

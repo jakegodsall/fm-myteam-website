@@ -37,7 +37,7 @@ const data = [
 
 export default function TestimonialSection() {
   return (
-    <section className="relative -z-20 flex w-full flex-col items-center bg-secondary-green-dark">
+    <section className="relative flex w-full flex-col items-center bg-secondary-green-dark">
       <div className="mt-[14rem] flex w-4/5 flex-col items-center text-center sm:max-w-[57rem] lg:max-w-[111rem]">
         <Image
           src={testimonialBox}
