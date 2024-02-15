@@ -6,7 +6,7 @@ import heroDesktopBackground from "@bg/bg-home-hero-desktop.svg";
 export default function Hero() {
   return (
     <section className="bg-home-hero relative flex flex-col items-center text-center lg:text-left">
-      <div className="mx-[2.4rem] mb-[20rem] flex max-w-[45.7rem] flex-col items-center sm:mb-[25.6rem] lg:mx-[16.5rem] lg:max-w-[111rem] lg:flex-row">
+      <div className="mx-[2.4rem] mb-[20rem] flex w-4/5 max-w-[45.7rem] flex-col items-center sm:mb-[25.6rem] lg:mx-[16.5rem] lg:max-w-[111rem] lg:flex-row">
         <h1 className="mb-[1.8rem] text-[4rem] leading-[4rem] sm:mb-[2.4rem] sm:text-[6.4rem] sm:leading-[5.6rem] lg:mb-0 lg:max-w-[42rem] lg:flex-1 lg:text-[9rem] lg:leading-[10rem] xl:max-w-none">
           Find the
           <br /> best <span className="text-primary-coral">talent</span>
