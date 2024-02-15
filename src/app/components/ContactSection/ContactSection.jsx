@@ -8,7 +8,7 @@ import NavBar from "@/app/components/NavBar";
 export default function ContactSection() {
   return (
     <footer className="flex flex-col items-center bg-secondary-green-darkest">
-      <div className="flex w-[90%] flex-col items-center px-[6rem] py-[6.6rem] text-center sm:flex-row sm:items-stretch sm:justify-between lg:max-w-[111rem]">
+      <div className="flex w-4/5 flex-col items-center py-[6.6rem] text-center sm:flex-row sm:items-stretch sm:justify-between lg:max-w-[111rem]">
         <div className="flex w-1/2 flex-col items-center sm:relative sm:items-start">
           <Image
             src={companyLogo}

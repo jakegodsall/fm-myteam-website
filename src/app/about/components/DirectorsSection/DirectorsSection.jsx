@@ -89,11 +89,12 @@ export default function DirectorsSection() {
         <h2 className="mb-[4.8rem] text-[3.2rem] font-bold">
           Meet the directors
         </h2>
-        <ul className="mb-[11.6rem] flex w-full flex-col flex-wrap gap-[5.2rem] px-[2.4rem] sm:mb-[12.8rem] sm:flex-row sm:justify-center sm:gap-x-[1.1rem] sm:gap-y-[7.6rem] lg:mb-[16.8rem] lg:gap-x-[3rem]">
+        <ul className="mb-[11.6rem] flex w-full flex-col flex-wrap gap-[5.2rem] sm:mb-[12.8rem] sm:flex-row sm:justify-center sm:gap-x-[1.1rem] sm:gap-y-[7.6rem] lg:mb-[16.8rem] lg:justify-between lg:gap-x-[3rem]">
           {data.map((director) => (
             <li
               key={director.id}
-              className="mx-auto w-[90%] max-w-[32.7rem] sm:mx-0 sm:w-[45%] sm:max-w-[28rem]"
+              className="mx-auto w-[90%] max-w-[32.7rem] sm:mx-0 sm:w-[45%] sm:max-w-[28rem] lg:w-[30%] lg:max-w-none"
+              o
             >
               <DirectorItem
                 avatar={director.avatar}
