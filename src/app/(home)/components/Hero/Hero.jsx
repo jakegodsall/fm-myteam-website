@@ -25,7 +25,7 @@ export default function Hero() {
           height="200"
         />
       </div>
-      <div className="absolute left-[-10rem]">
+      <div className="absolute left-[-10rem] hidden lg:block">
         <Image
           src={heroDesktopBackground}
           alt="circle with square of dots"

@@ -37,35 +37,37 @@ const data = [
 
 export default function BuildSection() {
   return (
-    <section className="relative flex flex-col items-center overflow-hidden bg-secondary-green-darkest pb-[6.4rem] sm:pb-[10rem]">
-      <div className="mb-[5.6rem] flex h-[24.4rem] w-full  sm:w-full">
-        <div className="relative w-full pl-[2.4rem] pt-[6.4rem]">
-          <div className="mb-[3.2rem] h-[0.4rem] w-[5rem] bg-primary-coral"></div>
-          <h2 className="max-w-[44.5rem] self-end text-[3.2rem] leading-[3.2rem]">
-            Build & manage distributed teams like no one else.
-          </h2>
+    <section className="relative flex flex-col items-center overflow-hidden bg-secondary-green-darkest pb-[6.4rem] sm:pb-[10rem] lg:flex-row lg:pb-0">
+      <div className="flex w-full flex-col items-center lg:mx-[16.5rem] lg:max-w-[111rem]  lg:flex-row lg:py-[14rem]">
+        <div className="mb-[5.6rem] flex h-[24.4rem] w-full flex-col lg:m-0 lg:flex-1 lg:self-start">
+          <div className="relative w-[70%] max-w-[40rem] self-start pl-[2.4rem] pt-[6.4rem] sm:max-w-[57rem] sm:self-center lg:p-0">
+            <div className="mb-[3.2rem] h-[0.4rem] w-[5rem] bg-primary-coral"></div>
+            <h2 className="max-w-[44.5rem] self-end text-[3.2rem] leading-[3.2rem] lg:text-[4.8rem] lg:leading-[4.8rem]">
+              Build & manage distributed teams like no one else.
+            </h2>
+          </div>
+          <div className="w-[15rem]"></div>
+          <Image
+            src={buildBackground}
+            width="200"
+            height="244"
+            className="absolute right-[-10rem] block h-[24.4rem] w-[20rem] lg:bottom-0"
+            alt="circle with grating"
+          />
         </div>
-        <div className="w-[15rem]"></div>
-        <Image
-          src={buildBackground}
-          width="200"
-          height="244"
-          className="absolute right-[-10rem] block h-[24.4rem] w-[20rem]"
-          alt="circle with grating"
-        />
+        <ul className="mx-[2.4rem] flex max-w-[34rem] flex-col items-center gap-[4.8rem] sm:max-w-[57rem] lg:mx-0 lg:flex-1">
+          {data.map((buildItem) => (
+            <li key={buildItem.id}>
+              <BuildItem
+                image={buildItem.image}
+                imageAlt={buildItem.imageAlt}
+                title={buildItem.title}
+                description={buildItem.description}
+              />
+            </li>
+          ))}
+        </ul>
       </div>
-      <ul className="mx-[2.4rem]  flex max-w-[34rem] flex-col items-center gap-[4.8rem] sm:max-w-[57rem]">
-        {data.map((buildItem) => (
-          <li key={buildItem.id}>
-            <BuildItem
-              image={buildItem.image}
-              imageAlt={buildItem.imageAlt}
-              title={buildItem.title}
-              description={buildItem.description}
-            />
-          </li>
-        ))}
-      </ul>
     </section>
   );
 }
