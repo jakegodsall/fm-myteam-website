@@ -37,37 +37,41 @@ const data = [
 
 export default function TestimonialSection() {
   return (
-    <section className="bg-secondary-green-darker flex flex-col items-center text-center">
-      <Image
-        src={testimonialBox}
-        alt="black box with grid"
-        width="147"
-        height="100"
-        className="mb-[4rem] self-start"
-      />
-      <h2 className="mx-[2.4rem] mb-[8.4rem] text-[3.3rem] leading-[3.2rem] sm:mb-[6rem] sm:max-w-[57rem] sm:translate-y-[-3rem]">
-        Delivering real results for top companies. Some of our
-        <span className="text-secondary-green-light">success stories.</span>
-      </h2>
-      <ul className="mx-[2.4rem] mb-[6.4rem] flex flex-col gap-[8.4rem] sm:mb-0 sm:max-w-[57rem]">
-        {data.map((testimonialItem) => (
-          <li key={testimonialItem.id}>
-            <TestimonialItem
-              author={testimonialItem.author}
-              position={testimonialItem.position}
-              testimonial={testimonialItem.testimonial}
-              avatar={testimonialItem.avatar}
-            />
-          </li>
-        ))}
-      </ul>
-      <Image
-        src={testimonialCircle}
-        alt="circle and grating"
-        width="200"
-        height="100"
-        className="h-[10rem] w-[20rem] self-end"
-      />
+    <section className="relative -z-20 flex w-full flex-col items-center bg-secondary-green-dark">
+      <div className="mt-[14rem] flex w-4/5 flex-col items-center text-center sm:max-w-[57rem] lg:max-w-[111rem]">
+        <Image
+          src={testimonialBox}
+          alt="black box with grid"
+          width="147"
+          height="100"
+          className="absolute left-0 top-0 mb-[4rem] self-start"
+        />
+        <h2 className="mx-[2.4rem] mb-[8.4rem] text-[3.3rem] leading-[3.2rem] sm:mb-[6rem] sm:translate-y-[-3rem] lg:text-[4.8rem] lg:leading-[4.8rem]">
+          Delivering real results for top companies. Some of our
+          <span className="text-secondary-green-light"> success stories.</span>
+        </h2>
+        <ul className="mx-[2.4rem] mb-[16.4rem] flex flex-col gap-[8.4rem] sm:mb-[10rem] lg:mb-[14rem] lg:flex-row">
+          {data.map((testimonialItem) => (
+            <li key={testimonialItem.id}>
+              <TestimonialItem
+                author={testimonialItem.author}
+                position={testimonialItem.position}
+                testimonial={testimonialItem.testimonial}
+                avatar={testimonialItem.avatar}
+              />
+            </li>
+          ))}
+        </ul>
+        <div className="absolute bottom-0 right-0">
+          <Image
+            src={testimonialCircle}
+            alt="circle and grating"
+            width="200"
+            height="100"
+            className="h-[10rem] w-[20rem] self-end"
+          />
+        </div>
+      </div>
     </section>
   );
 }

@@ -10,7 +10,7 @@ export default function TestimonialItem({
   avatar,
 }) {
   return (
-    <div className="relative flex flex-col items-center">
+    <div className="relative flex flex-col items-center lg:max-w-[35rem]">
       <Image
         src={quotesIcon}
         alt="double quotes"
@@ -18,13 +18,15 @@ export default function TestimonialItem({
         height="56"
         className="absolute top-[-3.5rem] -z-10"
       />
-      <p className="mb-[1.6rem] text-[1.5rem] leading-[2.5rem]">
+      <p className="mb-[1.6rem] text-[1.5rem] leading-[2.5rem] lg:mb-[2.4rem]">
         &lsquo;&lsquo;{testimonial}&rsquo;&rsquo;
       </p>
       <p className="text-[1.8rem] font-bold text-secondary-green-light">
         {author}
       </p>
-      <p className="mb-[1.6rem] text-[1.3rem] font-medium italic">{position}</p>
+      <p className="mb-[1.6rem] text-[1.3rem] font-medium italic lg:mb-[3.2rem]">
+        {position}
+      </p>
       <div className="h-[6.2rem] w-[6.2rem]">
         <Avatar image={avatar} alt={author} />
       </div>
