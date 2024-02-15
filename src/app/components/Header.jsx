@@ -7,7 +7,7 @@ import Button from "./UI/Button";
 
 export default function Header() {
   return (
-    <header className="mx-auto flex items-center justify-between lg:max-w-[111rem]">
+    <header className="mx-auto flex w-4/5 items-center justify-between lg:max-w-[111rem]">
       <Image
         src={logo}
         width="160"

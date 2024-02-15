@@ -43,26 +43,28 @@ const clients = [
 
 export default function ClientsSection() {
   return (
-    <section className="bg-secondary-green-darker relative flex flex-col items-center overflow-hidden pt-[8.8rem]">
-      <Image
-        src={clientsBackground}
-        alt="a circle"
-        width="200"
-        height="200"
-        className="absolute left-[-10rem] top-[-10rem]"
-      />
-      <h2 className="mb-[6.4rem] text-[3.2rem] font-bold">
-        Some of our clients
-      </h2>
-      <ul className="mb-[8.2rem] flex max-w-[15rem] flex-col items-center gap-[5.5rem] sm:mx-[4rem] sm:max-w-none sm:flex-row">
-        {clients.map((client) => (
-          <li key={client.id}>
-            <a href={client.link}>
-              <Image src={client.logo} alt={client.name} />
-            </a>
-          </li>
-        ))}
-      </ul>
+    <section className="relative flex flex-col items-center overflow-hidden bg-secondary-green-darker">
+      <div className="flex w-4/5 flex-col items-center pt-[8.8rem] lg:max-w-[111rem]">
+        <Image
+          src={clientsBackground}
+          alt="a circle"
+          width="200"
+          height="200"
+          className="absolute left-[-10rem] top-[-10rem]"
+        />
+        <h2 className="mb-[6.4rem] text-[3.2rem] font-bold">
+          Some of our clients
+        </h2>
+        <ul className="mb-[8.2rem] flex max-w-[15rem] flex-col items-center gap-[5.5rem] sm:mx-[4rem] sm:max-w-none sm:flex-row">
+          {clients.map((client) => (
+            <li key={client.id}>
+              <a href={client.link}>
+                <Image src={client.logo} alt={client.name} />
+              </a>
+            </li>
+          ))}
+        </ul>
+      </div>
     </section>
   );
 }
