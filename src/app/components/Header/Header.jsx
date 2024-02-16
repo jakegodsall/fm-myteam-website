@@ -1,4 +1,8 @@
+"use client";
+
+import { useState } from "react";
 import Image from "next/image";
+import clsx from "clsx";
 
 import logo from "@assets/logo.svg";
 import HamburgerButton from "../UI/HamburgerButton";
@@ -8,9 +12,15 @@ import Modal from "../UI/Modal";
 import MobileMenu from "../MobileMenu/MobileMenu";
 
 export default function Header() {
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+
+  const handleToggleMenu = () => {
+    setMobileMenuOpen(!mobileMenuOpen);
+  };
+
   return (
     <>
-      <header className="mx-auto flex w-4/5 items-center justify-between lg:max-w-[111rem]">
+      <header className="flex  items-center justify-between lg:max-w-[111rem]">
         <Image
           src={logo}
           width="160"
@@ -22,13 +32,24 @@ export default function Header() {
           <NavBar fontSize={1.8} />
           <Button>contact us</Button>
         </div>
-        <div className="relative z-40 sm:hidden">
-          <HamburgerButton />
+        <div
+          className={clsx(
+            "z-40 flex h-[2.3rem] w-[2.3rem] items-center sm:hidden",
+            mobileMenuOpen ? "fixed right-[2.4rem]" : "relative",
+          )}
+          onClick={handleToggleMenu}
+        >
+          <HamburgerButton
+            mobileMenuOpen={mobileMenuOpen}
+            setMobileMenuOpen={setMobileMenuOpen}
+          />
         </div>
       </header>
-      <Modal>
-        <MobileMenu />
-      </Modal>
+      {mobileMenuOpen && (
+        <Modal toggleMenu={handleToggleMenu}>
+          <MobileMenu toggleMenu={handleToggleMenu} />
+        </Modal>
+      )}
     </>
   );
 }
