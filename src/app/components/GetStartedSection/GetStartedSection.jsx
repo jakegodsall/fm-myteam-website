@@ -12,7 +12,7 @@ export default function GetStartedSection() {
           Ready to get started?
         </h2>
         <div className="mb-[10rem] border-secondary-green-darkest sm:mb-0">
-          <Button>contact us</Button>
+          <Button href="/contact">contact us</Button>
         </div>
         <Image
           src={contactBackground}

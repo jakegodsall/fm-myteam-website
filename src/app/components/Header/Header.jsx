@@ -31,7 +31,7 @@ export default function Header() {
         />
         <div className="ml-[4.8rem] hidden w-full items-center justify-between text-[1.8rem] sm:flex">
           <NavBar fontSize={1.8} />
-          <Button>contact us</Button>
+          <Button href="/contact">contact us</Button>
         </div>
         <div
           className={clsx(

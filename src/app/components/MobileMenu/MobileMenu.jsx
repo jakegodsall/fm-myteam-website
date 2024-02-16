@@ -18,7 +18,9 @@ export default function MobileMenu({ toggleMenu }) {
       <div className="ml-[4.8rem] mt-[11.2rem]">
         <NavBar isMobile toggleMenu={toggleMenu} />
         <div className="mt-[5rem]">
-          <Button onClick={toggleMenu}>contact us</Button>
+          <Button onClick={toggleMenu} href="/contact">
+            contact us
+          </Button>
         </div>
       </div>
       <Image
