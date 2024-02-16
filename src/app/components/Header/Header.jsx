@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import Image from "next/image";
+import { AnimatePresence } from "framer-motion";
 import clsx from "clsx";
 
 import logo from "@assets/logo.svg";
@@ -45,11 +46,13 @@ export default function Header() {
           />
         </div>
       </header>
-      {mobileMenuOpen && (
-        <Modal toggleMenu={handleToggleMenu}>
-          <MobileMenu toggleMenu={handleToggleMenu} />
-        </Modal>
-      )}
+      <AnimatePresence>
+        {mobileMenuOpen && (
+          <Modal toggleMenu={handleToggleMenu}>
+            <MobileMenu toggleMenu={handleToggleMenu} />
+          </Modal>
+        )}
+      </AnimatePresence>
     </>
   );
 }
