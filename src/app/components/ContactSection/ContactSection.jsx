@@ -2,8 +2,8 @@ import Image from "next/image";
 import Link from "next/link";
 
 import companyLogo from "@assets/logo.svg";
-import SocialBar from "@/app/components/SocialsBar";
-import NavBar from "@/app/components/NavBar";
+import SocialBar from "@/app/components/SocialsBar/SocialsBar";
+import NavBar from "@/app/components/NavBar/NavBar";
 
 export default function ContactSection() {
   return (

@@ -1,7 +1,7 @@
 import clsx from "clsx";
 import { Livvic } from "next/font/google";
 import "./globals.css";
-import Header from "./components/Header";
+import Header from "./components/Header/Header";
 
 const livvic = Livvic({ subsets: ["latin"], weight: ["500", "600", "700"] });
 
