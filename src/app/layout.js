@@ -20,7 +20,7 @@ export default function RootLayout({ children }) {
         )}
       >
         <div className="w-full max-w-[180rem] bg-secondary-green-dark">
-          <div className="bg-primary-teal px-[2.4rem] pb-[8rem] pt-[4.8rem] sm:px-[3rem] sm:pb-[12rem]">
+          <div className="w-full bg-primary-teal px-[2.4rem] pb-[8rem] pt-[4.8rem] sm:px-[3rem] sm:pb-[12rem]">
             <Header />
           </div>
           {children}
