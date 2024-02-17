@@ -5,13 +5,30 @@ import { useState } from "react";
 import TextInput from "./TextInput";
 import TextAreaInput from "./TextAreaInput";
 
+import { FormValidator, capitaliseFirstLetter } from "@/utils";
+
 export default function ContactForm() {
   const [formData, setFormData] = useState({
-    name: "",
-    email: "",
-    company: "",
-    title: "",
-    message: "",
+    name: {
+      value: "",
+      errorMessage: "",
+    },
+    email: {
+      value: "",
+      errorMessage: "",
+    },
+    company: {
+      value: "",
+      errorMessage: "",
+    },
+    title: {
+      value: "",
+      errorMessage: "",
+    },
+    message: {
+      value: "",
+      errorMessage: "",
+    },
   });
 
   const handleFormSubmit = (event) => {
@@ -27,47 +44,84 @@ export default function ContactForm() {
 
   const onChangeHandler = (event) => {
     const { name, value } = event.target;
+
     setFormData((prevState) => ({
       ...prevState,
-      [name]: value,
+      [name]: {
+        ...prevState[name],
+        value: value,
+      },
     }));
+  };
+
+  const onBlurHandler = (event) => {
+    const { name, value, placeholder } = event.target;
+
+    if (name === "email" && !FormValidator.isValidEmail(value)) {
+      setFormData((prevState) => ({
+        ...prevState,
+        [name]: {
+          ...prevState[name],
+          errorMessage: "You must enter a valid email address",
+        },
+      }));
+    }
+
+    if (!FormValidator.isNotEmpty(value)) {
+      setFormData((prevState) => ({
+        ...prevState,
+        [name]: {
+          ...prevState[name],
+          errorMessage: `${capitaliseFirstLetter(placeholder)} cannot be empty`,
+        },
+      }));
+    }
+
+    console.log("blurred: " + value);
+    console.log(formData);
   };
 
   return (
     <form
       onSubmit={handleFormSubmit}
       className="flex flex-col gap-[1.8rem] px-[2.6rem]"
+      noValidate
     >
       <TextInput
         name="name"
         placeholder="name"
-        value={formData.name}
+        value={formData.name.value}
         onChange={onChangeHandler}
+        onBlur={onBlurHandler}
       />
       <TextInput
         name="email"
         placeholder="email address"
-        value={formData.email}
+        value={formData.email.value}
         onChange={onChangeHandler}
+        onBlur={onBlurHandler}
         email
       />
       <TextInput
         name="company"
         placeholder="company name"
-        value={formData.company}
+        value={formData.company.value}
         onChange={onChangeHandler}
+        onBlur={onBlurHandler}
       />
       <TextInput
         name="title"
         placeholder="title"
-        value={formData.title}
+        value={formData.title.value}
         onChange={onChangeHandler}
+        onBlur={onBlurHandler}
       />
       <TextAreaInput
         name="message"
         placeholder="message"
-        value={formData.message}
+        value={formData.message.value}
         onChange={onChangeHandler}
+        onBlur={onBlurHandler}
       />
       <button
         type="submit"

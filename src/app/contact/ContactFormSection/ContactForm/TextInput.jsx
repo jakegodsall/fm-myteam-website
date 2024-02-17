@@ -5,6 +5,7 @@ export default function TextInput({
   placeholder,
   value,
   onChange,
+  onBlur,
   email,
 }) {
   return (
@@ -16,6 +17,7 @@ export default function TextInput({
         name={name}
         value={value}
         onChange={onChange}
+        onBlur={onBlur}
         placeholder={capitaliseFirstLetter(placeholder)}
       />
       <label

@@ -1,6 +1,12 @@
 import { capitaliseFirstLetter } from "@/utils";
 
-export default function TextAreaInput({ name, placeholder, value, onChange }) {
+export default function TextAreaInput({
+  name,
+  placeholder,
+  value,
+  onChange,
+  onBlur,
+}) {
   return (
     <div className="relative w-full border-b-[0.1rem] border-white">
       <textarea
@@ -10,6 +16,7 @@ export default function TextAreaInput({ name, placeholder, value, onChange }) {
         rows="3"
         value={value}
         onChange={onChange}
+        onBlur={onBlur}
         placeholder={placeholder}
         className="peer bg-transparent px-[1.4rem] py-[1.7rem] text-[1.5rem] text-[#99b8bb] placeholder:invisible focus:outline-none"
       ></textarea>
