@@ -1,10 +1,16 @@
 import { capitaliseFirstLetter } from "@/utils";
 
-export default function TextInput({ name, placeholder, value, onChange }) {
+export default function TextInput({
+  name,
+  placeholder,
+  value,
+  onChange,
+  email,
+}) {
   return (
     <div className="relative w-full border-b-[0.1rem] border-white">
       <input
-        type="text"
+        type={email ? "email" : "text"}
         id={name}
         className="peer w-full bg-transparent px-[1.4rem] py-[1.7rem] text-[1.5rem] text-[#99b8bb] placeholder:invisible focus:outline-none"
         name={name}

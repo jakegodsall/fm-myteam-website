@@ -7,7 +7,7 @@ export default function TextAreaInput({ name, placeholder, value, onChange }) {
         name={name}
         id={name}
         cols="20"
-        rows="4"
+        rows="3"
         value={value}
         onChange={onChange}
         placeholder={placeholder}

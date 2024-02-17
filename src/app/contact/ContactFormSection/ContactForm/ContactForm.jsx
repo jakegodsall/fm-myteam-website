@@ -8,7 +8,7 @@ import TextAreaInput from "./TextAreaInput";
 export default function ContactForm() {
   const [formData, setFormData] = useState({
     name: "",
-    "email address": "",
+    email: "",
     company: "",
     title: "",
     message: "",
@@ -26,7 +26,6 @@ export default function ContactForm() {
   };
 
   const onChangeHandler = (event) => {
-    console.log(event.target);
     const { name, value } = event.target;
     setFormData((prevState) => ({
       ...prevState,
@@ -37,7 +36,7 @@ export default function ContactForm() {
   return (
     <form
       onSubmit={handleFormSubmit}
-      className="flex flex-col gap-[1.8rem] px-[2.6rem] py-[4rem]"
+      className="flex flex-col gap-[1.8rem] px-[2.6rem]"
     >
       <TextInput
         name="name"
@@ -50,6 +49,7 @@ export default function ContactForm() {
         placeholder="email address"
         value={formData.email}
         onChange={onChangeHandler}
+        email
       />
       <TextInput
         name="company"
@@ -69,6 +69,12 @@ export default function ContactForm() {
         value={formData.message}
         onChange={onChangeHandler}
       />
+      <button
+        type="submit"
+        className="mt-[1rem] self-start rounded-full bg-white px-[3.2rem] py-[1.1rem] text-[1.8rem] text-secondary-green-dark"
+      >
+        submit
+      </button>
     </form>
   );
 }
