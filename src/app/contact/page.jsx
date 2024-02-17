@@ -1,12 +1,12 @@
 import ContactSection from "../components/ContactSection/ContactSection";
-import ContactForm from "./ContactForm/ContactForm";
+import ContactFormSection from "./ContactFormSection/ContactFormSection";
 import Hero from "./Hero/Hero";
 
 export default function ContactPage() {
   return (
     <main className="flex flex-col">
       <Hero />
-      <ContactForm />
+      <ContactFormSection />
       <ContactSection />
     </main>
   );
