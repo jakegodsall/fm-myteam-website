@@ -43,7 +43,25 @@ export default function ContactForm() {
   };
 
   const onChangeHandler = (event) => {
-    const { name, value } = event.target;
+    const { name, value, placeholder } = event.target;
+
+    if (!FormValidator.isNotEmpty(value)) {
+      setFormData((prevState) => ({
+        ...prevState,
+        [name]: {
+          ...prevState[name],
+          errorMessage: `${capitaliseFirstLetter(placeholder)} cannot be empty`,
+        },
+      }));
+    } else if (name === "email" && FormValidator.isValidEmail(value)) {
+      setFormData((prevState) => ({
+        ...prevState,
+        [name]: {
+          ...prevState[name],
+          errorMessage: "",
+        },
+      }));
+    }
 
     setFormData((prevState) => ({
       ...prevState,
@@ -63,6 +81,14 @@ export default function ContactForm() {
         [name]: {
           ...prevState[name],
           errorMessage: "You must enter a valid email address",
+        },
+      }));
+    } else {
+      setFormData((prevState) => ({
+        ...prevState,
+        [name]: {
+          ...prevState[name],
+          errorMessage: "",
         },
       }));
     }
@@ -91,6 +117,7 @@ export default function ContactForm() {
         name="name"
         placeholder="name"
         value={formData.name.value}
+        errorMessage={formData.name.errorMessage}
         onChange={onChangeHandler}
         onBlur={onBlurHandler}
       />
@@ -98,6 +125,7 @@ export default function ContactForm() {
         name="email"
         placeholder="email address"
         value={formData.email.value}
+        errorMessage={formData.email.errorMessage}
         onChange={onChangeHandler}
         onBlur={onBlurHandler}
         email
@@ -106,6 +134,7 @@ export default function ContactForm() {
         name="company"
         placeholder="company name"
         value={formData.company.value}
+        errorMessage={formData.company.errorMessage}
         onChange={onChangeHandler}
         onBlur={onBlurHandler}
       />
@@ -113,6 +142,7 @@ export default function ContactForm() {
         name="title"
         placeholder="title"
         value={formData.title.value}
+        errorMessage={formData.title.errorMessage}
         onChange={onChangeHandler}
         onBlur={onBlurHandler}
       />
@@ -120,6 +150,7 @@ export default function ContactForm() {
         name="message"
         placeholder="message"
         value={formData.message.value}
+        errorMessage={formData.message.errorMessage}
         onChange={onChangeHandler}
         onBlur={onBlurHandler}
       />
