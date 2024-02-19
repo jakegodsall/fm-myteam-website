@@ -12,7 +12,6 @@ export default function Home() {
       <BuildSection />
       <TestimonialSection />
       <GetStartedSection />
-      <ContactSection />
     </main>
   );
 }

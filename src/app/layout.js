@@ -2,6 +2,7 @@ import clsx from "clsx";
 import { Livvic } from "next/font/google";
 import "./globals.css";
 import Header from "./components/Header/Header";
+import ContactSection from "./components/ContactSection/ContactSection";
 
 const livvic = Livvic({ subsets: ["latin"], weight: ["500", "600", "700"] });
 
@@ -24,6 +25,9 @@ export default function RootLayout({ children }) {
             <Header />
           </div>
           {children}
+          <div>
+            <ContactSection />
+          </div>
         </div>
       </body>
     </html>

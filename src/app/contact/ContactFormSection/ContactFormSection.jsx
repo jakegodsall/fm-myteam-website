@@ -9,7 +9,6 @@ export default function ContactFormSection() {
     <section className="relative flex flex-col items-center overflow-hidden bg-primary-teal pb-[11rem]">
       <div className="w-full max-w-[45rem] sm:w-[70%] sm:max-w-[54rem]">
         <ContactForm />
-
         <Image
           src={contactBackground}
           width="200"

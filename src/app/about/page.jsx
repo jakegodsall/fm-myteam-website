@@ -11,7 +11,6 @@ export default function AboutPage() {
       <DirectorsSection />
       <ClientsSection />
       <GetStartedSection />
-      <ContactSection />
     </main>
   );
 }
