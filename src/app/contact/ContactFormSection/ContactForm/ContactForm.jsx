@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import { clsx } from "clsx";
 
 import TextInput from "./TextInput";
 import TextAreaInput from "./TextAreaInput";
@@ -31,6 +32,10 @@ export default function ContactForm() {
     },
   });
 
+  const formInputsAreValid = Object.values(formData).every(
+    (control) => control.errorMessage === "",
+  );
+
   const handleFormSubmit = (event) => {
     // Prevent default behaviour of the form submission
     event.preventDefault();
@@ -41,7 +46,6 @@ export default function ContactForm() {
     const formControlsArrayWithoutSubmitButton = formControlsArray.filter(
       (control) => control.type !== "submit",
     );
-    console.log(formControlsArrayWithoutSubmitButton);
 
     formControlsArrayWithoutSubmitButton.forEach((control) => {
       const name = control.name;
@@ -49,7 +53,6 @@ export default function ContactForm() {
       const value = control.value;
 
       if (!FormValidator.isNotEmpty(value)) {
-        console.log(name + " is empty");
         setFormData((prevState) => ({
           ...prevState,
           [name]: {
@@ -63,6 +66,8 @@ export default function ContactForm() {
     // Get the data submitted with the form
     const fd = new FormData(event.target);
     const obj = Object.fromEntries(fd.entries());
+
+    console.log(obj);
   };
 
   const onChangeHandler = (event) => {
@@ -179,7 +184,11 @@ export default function ContactForm() {
       />
       <button
         type="submit"
-        className="mt-[1rem] self-start rounded-full bg-white px-[3.2rem] py-[1.1rem] text-[1.8rem] text-secondary-green-dark"
+        className={clsx(
+          "mt-[1rem] self-start rounded-full bg-white px-[3.2rem] py-[1.1rem] text-[1.8rem] text-secondary-green-dark transition-all duration-300 hover:scale-[1.05] active:translate-y-[0.5rem]",
+          !formInputsAreValid &&
+            "cursor-not-allowed opacity-60 transition-all duration-300",
+        )}
       >
         submit
       </button>

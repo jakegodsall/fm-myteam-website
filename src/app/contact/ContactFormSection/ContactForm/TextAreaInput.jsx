@@ -15,13 +15,13 @@ export default function TextAreaInput({
       <textarea
         name={name}
         id={name}
-        cols="20"
+        // cols="20"
         rows="3"
         value={value}
         onChange={onChange}
         onBlur={onBlur}
         placeholder={placeholder}
-        className="peer bg-transparent px-[1.4rem] py-[1.7rem] text-[1.5rem] text-[#99b8bb] placeholder:invisible focus:outline-none"
+        className="peer w-full resize-none bg-transparent px-[1.4rem] py-[1.7rem] text-[1.5rem] text-[#99b8bb] placeholder:invisible focus:outline-none"
       ></textarea>
       <label
         className="absolute left-[1.4rem] top-[-0.5rem] text-[1.2rem] text-[#99b8bb] transition-all duration-300 peer-placeholder-shown:translate-y-[2.3rem] peer-placeholder-shown:text-[1.5rem]"
