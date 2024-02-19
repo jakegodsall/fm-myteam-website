@@ -28,7 +28,7 @@ export default function ContactPage() {
         src={contactBackground}
         width="200"
         height="200"
-        className="absolute bottom-[-10rem] right-[-10rem] sm:bottom-0"
+        className="absolute bottom-[-10rem] right-[-10rem] sm:bottom-0 lg:bottom-[-10rem]"
         alt="circle with a square"
       />
     </main>

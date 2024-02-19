@@ -138,7 +138,7 @@ export default function ContactForm() {
   return (
     <form
       onSubmit={handleFormSubmit}
-      className="flex flex-col gap-[1.8rem] px-[2.6rem]"
+      className="flex flex-col gap-[1.8rem] px-[2.6rem] lg:relative lg:z-20"
       noValidate
     >
       <TextInput

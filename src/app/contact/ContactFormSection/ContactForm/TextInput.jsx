@@ -31,7 +31,7 @@ export default function TextInput({
       <AnimatePresence>
         {errorMessage && (
           <motion.p
-            className="absolute bottom-0 right-0 text-[1.2rem] text-red-500"
+            className="text-[1.2rem absolute bottom-0 right-0 text-primary-coral"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
