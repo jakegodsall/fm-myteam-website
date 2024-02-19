@@ -11,7 +11,7 @@ export default function GetStartedSection() {
         <h2 className="mb-[3rem] max-w-[22rem] text-[3.2rem] font-bold leading-[3.2rem] sm:mb-0 sm:max-w-none">
           Ready to get started?
         </h2>
-        <div className="mb-[10rem] border-secondary-green-darkest sm:mb-0">
+        <div className="mb-[10rem] border-secondary-green-darkest transition-all duration-300 hover:scale-[1.05] sm:mb-0">
           <Button href="/contact">contact us</Button>
         </div>
         <Image

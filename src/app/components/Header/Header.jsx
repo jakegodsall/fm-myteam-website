@@ -11,6 +11,7 @@ import NavBar from "../NavBar/NavBar";
 import Button from "../UI/Button";
 import Modal from "../UI/Modal";
 import MobileMenu from "../MobileMenu/MobileMenu";
+import Link from "next/link";
 
 export default function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -22,13 +23,15 @@ export default function Header() {
   return (
     <>
       <header className="mx-auto flex items-center justify-between lg:max-w-[111rem]">
-        <Image
-          src={logo}
-          width="160"
-          height="40"
-          alt="myteam logo"
-          className="w-[12.8rem]"
-        />
+        <Link href="/">
+          <Image
+            src={logo}
+            width="160"
+            height="40"
+            alt="myteam logo"
+            className="w-[12.8rem]"
+          />
+        </Link>
         <div className="ml-[4.8rem] hidden w-full items-center justify-between text-[1.8rem] sm:flex">
           <NavBar fontSize={1.8} />
           <Button href="/contact">contact us</Button>
