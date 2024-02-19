@@ -27,10 +27,12 @@ const data = [
 
 export default function Hero() {
   return (
-    <section className="flex flex-col items-center bg-primary-teal">
-      <div className="w-[90%] max-w-[111rem]">
+    <section className="flex flex-col items-center bg-primary-teal px-[10%]">
+      <div className="max-w-[111rem]">
         <div className="mb-[4rem] flex flex-col items-center">
-          <h1 className="mb-[1.6rem] text-[4rem] font-bold">Contact</h1>
+          <h1 className="mb-[1.6rem] text-[4rem] font-bold sm:mb-[2.4rem] sm:text-[6.4rem]">
+            Contact
+          </h1>
           <p className="text-[3.2rem] text-primary-coral">Ask us about</p>
         </div>
         <ul className="mb-[5.6rem] flex flex-col gap-[2.4rem]">
