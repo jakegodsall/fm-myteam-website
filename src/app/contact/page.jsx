@@ -9,7 +9,7 @@ import contactTabletBackground from "@bg/bg-about-directors.svg";
 export default function ContactPage() {
   return (
     <main className="relative flex flex-col items-center overflow-hidden bg-primary-teal">
-      <div className="flex w-full flex-col  lg:max-w-[111rem] lg:flex-row ">
+      <div className="flex w-full flex-col lg:max-w-[111rem] lg:flex-row">
         <div className="flex-1">
           <Hero />
         </div>
