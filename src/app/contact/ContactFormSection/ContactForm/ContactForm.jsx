@@ -35,11 +35,34 @@ export default function ContactForm() {
     // Prevent default behaviour of the form submission
     event.preventDefault();
 
+    // Get an array of the form controls (without the submit button)
+    const formControls = event.target.elements;
+    const formControlsArray = Array.from(formControls);
+    const formControlsArrayWithoutSubmitButton = formControlsArray.filter(
+      (control) => control.type !== "submit",
+    );
+    console.log(formControlsArrayWithoutSubmitButton);
+
+    formControlsArrayWithoutSubmitButton.forEach((control) => {
+      const name = control.name;
+      const placeholder = control.placeholder;
+      const value = control.value;
+
+      if (!FormValidator.isNotEmpty(value)) {
+        console.log(name + " is empty");
+        setFormData((prevState) => ({
+          ...prevState,
+          [name]: {
+            ...prevState[name],
+            errorMessage: `${capitaliseFirstLetter(placeholder)} cannot be empty`,
+          },
+        }));
+      }
+    });
+
     // Get the data submitted with the form
     const fd = new FormData(event.target);
     const obj = Object.fromEntries(fd.entries());
-
-    console.log(obj);
   };
 
   const onChangeHandler = (event) => {

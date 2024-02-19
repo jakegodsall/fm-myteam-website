@@ -1,9 +1,12 @@
+import { motion, AnimatePresence } from "framer-motion";
+
 import { capitaliseFirstLetter } from "@/utils";
 
 export default function TextAreaInput({
   name,
   placeholder,
   value,
+  errorMessage,
   onChange,
   onBlur,
 }) {
@@ -26,6 +29,18 @@ export default function TextAreaInput({
       >
         {capitaliseFirstLetter(placeholder)}
       </label>
+      <AnimatePresence>
+        {errorMessage && (
+          <motion.p
+            className="absolute bottom-0 right-0 text-[1.2rem] text-red-500"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+          >
+            {errorMessage}
+          </motion.p>
+        )}
+      </AnimatePresence>
     </div>
   );
 }
