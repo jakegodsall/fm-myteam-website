@@ -32,13 +32,13 @@ export default function DirectorItem({
         {/* Front Card */}
         <div
           className={clsx(
-            "backface-hidden preserve-3d  perspective-full absolute flex h-full w-full flex-col items-center bg-secondary-green-darker",
+            "backface-hidden preserve-3d perspective-full absolute  flex h-full w-full flex-col items-center bg-secondary-green-darker",
             flipped
               ? "rotate-y-180  transition-all duration-700"
               : "transition-all duration-700",
           )}
         >
-          <div className="mb-[1.6rem] h-[9.6rem] w-[9.6rem]">
+          <div className="mb-[1.6rem] mt-[3.2rem] h-[9.6rem] w-[9.6rem]">
             <Avatar image={avatar} alt={name} />
           </div>
           <p className="text-[1.8rem] font-bold text-secondary-green-light">
@@ -61,7 +61,7 @@ export default function DirectorItem({
               : "rotate-y-180 transition-all duration-700",
           )}
         >
-          <p className="mb-[1rem] text-[1.8rem] font-bold text-[#79c8c7]">
+          <p className="mb-[1rem] mt-[3.2rem] text-[1.8rem] font-bold text-[#79c8c7]">
             {name}
           </p>
           <p className="mb-[2.4rem] text-[1.7rem] leading-[2.5rem]">
