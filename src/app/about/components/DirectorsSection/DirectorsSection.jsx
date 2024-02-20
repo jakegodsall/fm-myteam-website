@@ -18,7 +18,7 @@ const data = [
     avatar: nikitaMarksAvatar,
     name: "Nikita Marks",
     role: "Founder & CEO",
-    mesasge:
+    message:
       "It always amazes me how much talent there is in every corner of the globe.",
     twitter: "#",
     linkedin: "#",
@@ -100,6 +100,9 @@ export default function DirectorsSection() {
                 avatar={director.avatar}
                 name={director.name}
                 role={director.role}
+                message={director.message}
+                twitter={director.twitter}
+                linkedin={director.linkedin}
               />
             </li>
           ))}
