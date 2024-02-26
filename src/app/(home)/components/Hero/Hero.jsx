@@ -22,6 +22,7 @@ export default function Hero() {
             alt="two circles with a box and a grating"
             width="350"
             height="200"
+            className="h-auto w-auto"
           />
         </div>
         <div className="absolute left-[-10rem] hidden lg:block">
@@ -30,6 +31,7 @@ export default function Hero() {
             alt="circle with square of dots"
             width="200"
             height="200"
+            className="h-auto w-auto"
           />
         </div>
       </div>

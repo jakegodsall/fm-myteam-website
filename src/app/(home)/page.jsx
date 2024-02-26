@@ -1,4 +1,3 @@
-import Image from "next/image";
 import Hero from "./components/Hero/Hero";
 import BuildSection from "./components/BuildSection/BuildSection";
 import GetStartedSection from "../components/GetStartedSection/GetStartedSection";

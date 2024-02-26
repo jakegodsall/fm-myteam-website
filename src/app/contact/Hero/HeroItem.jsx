@@ -6,9 +6,9 @@ export default function HeroItem({ icon, alt, message }) {
       <Image
         src={icon}
         alt={alt}
-        className="mr-[2.4rem] h-[7.2rem] w-[7.2rem]"
         width="72"
         height="72"
+        className="mr-[2.4rem] h-[7.2rem] w-[7.2rem]"
       />
       <p className="flex-4 text-[1.8rem] leading-[2.8rem]">{message}</p>
     </div>

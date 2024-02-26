@@ -21,14 +21,14 @@ export default function ContactPage() {
         src={contactTabletBackground}
         width="200"
         height="200"
-        className="absolute left-[-10rem] top-0 hidden sm:bottom-0 sm:block"
+        className="absolute left-[-10rem] top-0 hidden h-auto w-auto sm:bottom-0 sm:block"
         alt="circle with a square"
       />
       <Image
         src={contactBackground}
         width="200"
         height="200"
-        className="absolute bottom-[-10rem] right-[-10rem] sm:bottom-0 lg:bottom-[-10rem]"
+        className="absolute bottom-[-10rem] right-[-10rem] h-auto w-auto sm:bottom-0 lg:bottom-[-10rem]"
         alt="circle with a square"
       />
     </main>

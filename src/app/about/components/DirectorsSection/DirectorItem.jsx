@@ -26,15 +26,15 @@ export default function DirectorItem({
 
   return (
     // Card Outer
-    <div className="relative flex h-[25rem] w-[33.3rem] flex-col items-center pb-[5.6rem] pt-[3.2rem]">
+    <div className="relative flex h-[25rem] flex-col items-center pb-[5.6rem] pt-[3.2rem]">
       {/* Card Inner */}
       <div className="flex h-full w-full flex-col items-center">
         {/* Front Card */}
         <div
           className={clsx(
-            "backface-hidden preserve-3d perspective-full absolute  flex h-full w-full flex-col items-center bg-secondary-green-darker",
+            "absolute flex h-full w-full  flex-col items-center bg-secondary-green-darker backface-hidden preserve-3d perspective-full",
             flipped
-              ? "rotate-y-180  transition-all duration-700"
+              ? "transition-all  duration-700 rotate-y-180"
               : "transition-all duration-700",
           )}
         >
@@ -55,10 +55,10 @@ export default function DirectorItem({
         {/* Back Card */}
         <div
           className={clsx(
-            "backface-hidden perspective-full preserve-3d absolute flex h-full w-full flex-col items-center bg-secondary-green-darker px-[2.3rem] text-center",
+            "absolute flex h-full w-full flex-col items-center bg-secondary-green-darker px-[2.3rem] text-center backface-hidden preserve-3d perspective-full",
             flipped
               ? "transition-all duration-700"
-              : "rotate-y-180 transition-all duration-700",
+              : "transition-all duration-700 rotate-y-180",
           )}
         >
           <p className="mb-[1rem] mt-[3.2rem] text-[1.8rem] font-bold text-[#79c8c7]">
