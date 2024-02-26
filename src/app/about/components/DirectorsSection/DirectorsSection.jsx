@@ -94,7 +94,6 @@ export default function DirectorsSection() {
             <li
               key={director.id}
               className="mx-auto w-[90%] max-w-[32.7rem] sm:mx-0 sm:w-[45%] sm:max-w-[28rem] lg:w-[30%] lg:max-w-none"
-              o
             >
               <DirectorItem
                 avatar={director.avatar}
