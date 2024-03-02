@@ -1,36 +1,50 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# myteam Website (Frontend Mentor)
 
-## Getting Started
+This is my personal solution to the [myteam website challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/myteam-multipage-website-mxlEauvW). Frontend Mentor challenges help you improve your coding skills by building realistic projects.
 
-First, run the development server:
+## Overview
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+### The challenge
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+**myteam** is a startup created by Nikita Marks, Cristian Duncan and Cruz Hamer to help companies build and improve their teams.
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+The specifications for the website are as follows. The users should be able to:
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+- View the optimal layout for each page depending on their device's screen size
+- See hover states for all interactive elements throughout the site
+- See the correct content for each team member on the About page when the `+` icon is clicked
+- Receive an error message when the contact form is submitted if:
+  - The `Name`, `Email Address` or `Message` fields are empty should show "This field is required"
+  - The `Email Address` is not formatted correctly should show "Please use a valid email address"
 
-## Learn More
+### Screenshot
 
-To learn more about Next.js, take a look at the following resources:
+![](./complete/complete_screenshot.png)
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+### Links
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+- Solution URL: [GitHub](https://github.com/jakegodsall/fm-myteam-website)
+- Live Site URL: [Vercel](https://fm-myteam-website.vercel.app/)
 
-## Deploy on Vercel
+## My process
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+### Built with
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+- [React](https://reactjs.org/) - JS library
+- [Next.js](https://nextjs.org/) - React framework
+- [Framer Motion](https://www.framer.com/motion/)
+
+### Useful resources
+
+- [How to Create 3D Flipping Animation on a Box/Card with CSS
+  ](https://www.w3docs.com/snippets/css/how-to-create-a-3d-flipping-animation-on-a-box-card-with-css.html) - This helped me to implement the card flipping behaviour on the _About_ page.
+
+## Author
+
+- Website - [Jake Godsall](https://jakegodsall.com)
+- Frontend Mentor - [@jakegodsall](https://www.frontendmentor.io/profile/jakegodsall)
+- LinkedIn - [@godsalljake](https://www.linkedin.com/in/godsalljake/)
+
+## License
+
+This project is open source and available under the [MIT License](./LICENSE).
