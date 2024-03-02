@@ -10,7 +10,7 @@ export default function NavBar({ isMobile, toggleMenu }) {
       <Link onClick={toggleMenu} href="/">
         home
       </Link>
-      <Link onClick={toggleMenu} href="/about">
+      <Link onClick={toggleMenu} href="about">
         about
       </Link>
     </nav>
