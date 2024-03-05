@@ -1,3 +1,6 @@
+"use client";
+
+import { useState } from "react";
 import Image from "next/image";
 
 import directorsTopBackground from "@bg/bg-about-directors.svg";
@@ -76,6 +79,12 @@ const data = [
 ];
 
 export default function DirectorsSection() {
+  const [flippedCard, setFlippedCard] = useState(null);
+
+  const handleCardIsFlipped = (directorId) => {
+    setFlippedCard(directorId);
+  };
+
   return (
     <section className="relative flex flex-col items-center overflow-hidden bg-secondary-green-dark">
       <div className="flex w-4/5 flex-col items-center pt-[8.8rem] sm:pt-[10rem] lg:max-w-[111rem]">
@@ -96,12 +105,15 @@ export default function DirectorsSection() {
               className="mx-auto w-[90%] max-w-[32.7rem] sm:mx-0 sm:w-[45%] sm:max-w-[28rem] lg:w-[30%] lg:max-w-none"
             >
               <DirectorItem
+                id={director.id}
                 avatar={director.avatar}
                 name={director.name}
                 role={director.role}
                 message={director.message}
                 twitter={director.twitter}
                 linkedin={director.linkedin}
+                flipped={director.id === flippedCard}
+                handleFlip={handleCardIsFlipped}
               />
             </li>
           ))}

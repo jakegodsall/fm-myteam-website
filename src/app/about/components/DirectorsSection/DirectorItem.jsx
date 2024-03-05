@@ -11,17 +11,18 @@ import twitterLogo from "@icons/icon-twitter.svg";
 import linkedinLogo from "@icons/icon-linkedin.svg";
 
 export default function DirectorItem({
+  id,
   avatar,
   name,
   role,
   message,
   twitter,
   linkedin,
+  flipped,
+  handleFlip,
 }) {
-  const [flipped, setFlipped] = useState(false);
-
   const handleButtonClicked = () => {
-    setFlipped(!flipped);
+    handleFlip(id);
   };
 
   return (
