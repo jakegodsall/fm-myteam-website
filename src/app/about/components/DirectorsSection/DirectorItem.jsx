@@ -30,7 +30,7 @@ export default function DirectorItem({
 
     <div
       onClick={handleButtonClicked}
-      className="relative flex h-[25rem] cursor-pointer select-none flex-col items-center pb-[5.6rem] pt-[3.2rem] transition-all duration-300 hover:scale-[1.05]"
+      className="relative flex h-[27rem] cursor-pointer select-none flex-col items-center pb-[5.6rem] pt-[3.2rem] transition-all duration-300 hover:scale-[1.05]"
     >
       {/* Card Inner */}
       <div className="flex h-full w-full flex-col items-center">
