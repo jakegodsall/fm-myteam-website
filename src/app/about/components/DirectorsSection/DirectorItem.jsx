@@ -27,7 +27,11 @@ export default function DirectorItem({
 
   return (
     // Card Outer
-    <div className="relative flex h-[25rem] flex-col items-center pb-[5.6rem] pt-[3.2rem]">
+
+    <div
+      onClick={handleButtonClicked}
+      className="relative flex h-[25rem] cursor-pointer select-none flex-col items-center pb-[5.6rem] pt-[3.2rem] transition-all duration-300 hover:scale-[1.05]"
+    >
       {/* Card Inner */}
       <div className="flex h-full w-full flex-col items-center">
         {/* Front Card */}
@@ -88,10 +92,7 @@ export default function DirectorItem({
               />
             </a>
           </div>
-          <div
-            className="absolute bottom-[-2.5rem] h-[5.6rem] w-[5.6rem] rounded-full bg-[#79C8C7] transition-all duration-300 hover:scale-[1.1]"
-            onClick={handleButtonClicked}
-          >
+          <div className="absolute bottom-[-2.5rem] h-[5.6rem] w-[5.6rem] rounded-full bg-[#79C8C7] hover:scale-[1.1]">
             <PlusButton />
           </div>
         </div>

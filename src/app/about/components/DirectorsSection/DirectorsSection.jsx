@@ -82,7 +82,11 @@ export default function DirectorsSection() {
   const [flippedCard, setFlippedCard] = useState(null);
 
   const handleCardIsFlipped = (directorId) => {
-    setFlippedCard(directorId);
+    if (flippedCard === directorId) {
+      setFlippedCard(null);
+    } else {
+      setFlippedCard(directorId);
+    }
   };
 
   return (
